@@ -27,3 +27,5 @@ grid_experiments.py
 
 ### Note
 Adjust directory paths as needed for your environment.
+
+This is a group Project
