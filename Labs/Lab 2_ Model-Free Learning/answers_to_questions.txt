@@ -1,0 +1,23 @@
+# Exercise 1.4
+
+The results are less volatile with more runs. The value function using 500,000 steps is smoother 
+as the Monte Carlo estimates have had more episodes to converge which reduces its variance.
+This happens as with more runs, each state's value estimate is averaged over a larger number of samples, 
+which reduces the impact of outliers and random variability. 
+
+# Exercise 2.4
+
+We think the policies are different probably because, Q-learning is an off-policy method that always updates based on 
+the best possible action (max(Q[s, a])), even if that action was not taken. This makes Q-learning more aggressive 
+in seeking the optimal policy. SARSA, on the other hand, updates based on the action that was actually taken, 
+leading to a more cautious policy aligned with the actual exploration, which can sometimes be less optimal.
+
+# Exercise 2.5
+
+When we set ϵ=0, we noticed that both algorithms achieved similar policy. Which perhaps is because they all
+followed their greedy policies based on the Q-values they learned. And neither algorithm will explore further.
+
+# Exercise 2.6
+
+If we train both algorithms with ϵ=0 (i.e., no exploration), both Q-learning and SARSA will be stuck with the initial 
+policy they start with, as they won't be able to explore and discover better actions in the environment.
